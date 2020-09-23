@@ -1,1 +1,28 @@
 Hello Devops World
+
+
+The Golden Gate Bridge DevOps Engineer - Batch 05 - Bootcamp_02_Virtual 
+Meeting link: https://tcsglobal.webex.com/tcsglobal/j.php?MTID=m9c9190dc871a5f4224e771b4dbcc9b39
+Meeting number:170 271 1237
+Meeting password:Tata@123
+https://github.com/shubhamkushwah123
+
+
+DAY 01
+1. Configuring and Installing Maven into your personal laptops. 
+2. Creating GitHub account and Configuring Git Client into your personal laptops. 
+3. Creating a Spring Boot Application and run it as instructed in the shared readme. 
+4. Learn about Junit with Spring boot. 
+5. Learn about Docker Installation for your respective OS.
+
+DAY 02 :
+
+1. Follow the instructions and practice all the git commands that are given in git readme, Create a document attach a screenshot of the output for every command and put it into your GitHub repository.
+2. Push your Spring boot Application in to your Github Respository.
+3. Create 2 rest Services and 5 methods each of your choice. Write Junit  test cases to test all of these methods and push it into your repository.
+
+
+Hands on Day 3 : 
+1. Write a Dockerfile to create a docker image for your Spring boot Application and push that image to docker hub, try running it different environment by pulling it.
+2. Write a Dockerfile to create docker image for a Dynamic Java Project(war file) and push that image to docker hub. Try running it in different environment by pulling it.
+3. Write a DockerCompose file to run your SpringBoot Application along with mysql db container and establish the connectivity between application and db.
