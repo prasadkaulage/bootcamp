@@ -1,0 +1,20 @@
+services:
+  docker-mysql:
+    restart: always
+    container_name: docker-mysql
+    image: mysql
+    environment:
+      MYSQL_DATABASE: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - "6033:3306"
+  book-manager-app:
+    restart: on-failure
+    build: ./
+    expose:
+      - "10222"
+    ports:
+      - 10222:10222
+    depends_on:
+      - docker-mysql

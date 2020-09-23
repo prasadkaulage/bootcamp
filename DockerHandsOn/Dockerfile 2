@@ -1,0 +1,11 @@
+FROM tomcat
+
+VOLUME /tmp
+
+EXPOSE 8887
+
+ARG WAR_FILE=/target/*.war
+
+COPY ${WAR_FILE} app.war
+
+MAINTAINER "prasadkaulage@gmail.com"
