@@ -1,0 +1,25 @@
+node{
+    
+    
+    stage("Checkout Source Code"){
+        
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/prasadkaulage/bootcamp.git']]])
+    }
+    
+    stage("Test,Build"){
+      def M2_HOME="/usr/share/maven"
+      def MVN_CMD="${M2_HOME}/bin/mvn"
+      sh'mvn -f SpringBootFirstAppln/pom.xml clean package'
+    }
+    
+     stage("Create Docker image"){
+     sh 'docker --version'
+    // sh 'cd SpringBootFirstAppln'
+     sh 'sudo docker build -t prasadkaulage/spring:1.0.0 SpringBootFirstAppln'
+    }
+    
+    stage("Push Docker image"){
+     sh 'sudo docker push prasadkaulage/spring:1.0.0'
+    }
+
+}
